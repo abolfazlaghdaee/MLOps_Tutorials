@@ -1,0 +1,88 @@
+1)
+touch Example.txt
+chmod u=rw,g=r,o=r example.txt
+
+2)
+chmod u=r,g=,o= example.txt
+
+
+
+3) 
+mkdir mydir
+chmod u=rwx,g=rx,o=r mydir
+
+
+4)
+touch script.sh
+chmod u+x script.sh
+
+
+5)
+chmod u=rwx,g=rx,o=rx script.sh
+یا
+chmod u=w,g=rx,o=rx script.sh
+
+
+6)
+touch data.csv
+chmod u=rw,g=,o= data.csv
+
+
+7)
+chmod u=rw,g=,o= project.docx
+
+
+8)
+chmod -R u=rwx,g=rx,o= backup
+
+
+9)
+touch shared.txt
+chmod u=rw,g=w,o= shared.txt
+
+
+10)
+chmod u=rw,g=rw,o= logs.log
+
+
+11)
+touch document.txt
+gzip document.txt
+
+
+12)
+gunzip archive.gz
+
+
+13)
+sudo apt install zip 
+touch file1.txt file2.txt
+zip files.zip file1.txt file2.txt
+
+
+14)
+unzip data.zip
+
+
+15)
+tar -czvf project.tar.gz project
+
+
+16)
+tar -xzf backup.tar.gz
+
+
+17)
+tar -cjf source_code.tar.bz2 source_code
+
+
+18)
+tar -xjf data.tar.bz2
+
+19)
+touch logfile.log
+xz logfile.log
+
+20)
+sudo apt install 7zip-full 
+7z a archive.7z file1.txt file2.txt docs
