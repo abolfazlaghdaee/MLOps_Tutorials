@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+</head>
+<body>
+   
+
+    {% for key in std_dict.keys() %}
+    <a href="/profile/{{ key }}">{{ key , std_dict[key]}}</a>  <br>
+    {% endfor %}    <br>
+
+</body>
+</html>
