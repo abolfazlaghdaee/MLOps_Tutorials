@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reigstraion Form</title>
+</head>
+<body>
+    <form action="{{url_for('Register')}} " method='post' novalidate>
+
+
+        {% if form.username.errors %}
+            {% for error in form.username.errors %}
+                <li>{{error}} </li>
+
+            {% endfor %}
+
+        {% endif %}
+
+        {% if form.password.errors %}
+            {% for error in form.password.errors %}
+                <li>{{error}} </li>
+
+            {% endfor %}
+
+        {% endif %}
+
+        
+        {% if form.email.errors %}
+            {% for error in form.email.errors %}
+                <li>{{error}} </li>
+
+            {% endfor %}
+
+        {% endif %}
+
+
+
+        {% if form.confirm_password.errors %}
+            {% for error in form.confirm_password.errors %}
+                <li>{{error}} </li>
+
+            {% endfor %}
+
+        {% endif %}
+
+
+
+        {{form.csrf_token}}
+
+
+        <p>
+            {{form.username.label}} {{form.username(placeholder='Enter your username')}} 
+        
+        </p>
+        <p>
+            {{form.email.label}} {{form.email(placeholder='Enter your email')}}
+        </p>
+        <p>
+            {{form.password.label}} {{form.password(placeholder='Enter your password')}}
+        </p>
+        <p>
+            {{form.confirm_password.label}} {{form.confirm_password(placeholder='Enter your password  again')}}
+        </p>
+        <p>
+            {{form.submit()}}
+        </p>
+
+    </form>
+</body>
+</html>
